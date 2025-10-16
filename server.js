@@ -20,6 +20,11 @@ if (process.env.OPENAI_API_KEY) {
     openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY
     });
+    console.log('✅ OpenAI initialized successfully');
+    console.log('🔑 API key length:', process.env.OPENAI_API_KEY.length);
+} else {
+    console.log('❌ OpenAI API key not found');
+    console.log('📋 Available env vars:', Object.keys(process.env).filter(key => key.includes('OPENAI')));
 }
 
 // Middleware
