@@ -213,7 +213,7 @@
     <div class="chat-container">
         <div class="chat-header">
             <h1>🤖 Virtual Labor Force AI Assistant</h1>
-            <p>Powered by Llama 3.1 - Running Locally</p>
+            <p><p>Powered by OpenAI GPT-4o-mini</p></p>
         </div>
 
         <div class="chat-messages" id="chatMessages">
@@ -284,7 +284,7 @@
         // Send message to backend
         async function sendMessage(message) {
             try {
-                const response = await fetch('http://localhost:3001/api/chat', {
+                const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
